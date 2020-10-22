@@ -26,6 +26,7 @@ const Dashboard: React.FC = () => {
   const [editModalOpen, setEditModalOpen] = useState(false);
 
   useEffect(() => {
+    console.log('>>>>useEffect');
     async function loadFoods(): Promise<void> {
       // TODO LOAD FOODS
     }
@@ -67,6 +68,7 @@ const Dashboard: React.FC = () => {
 
   return (
     <>
+      TESTE ssdfldsljdlskjksdjlsjdfl
       <Header openModal={toggleModal} />
       <ModalAddFood
         isOpen={modalOpen}
@@ -79,7 +81,6 @@ const Dashboard: React.FC = () => {
         editingFood={editingFood}
         handleUpdateFood={handleUpdateFood}
       />
-
       <FoodsContainer data-testid="foods-list">
         {foods &&
           foods.map(food => (
